@@ -1,0 +1,19 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Travel Planner</title>
+</head>
+<body>
+<h1>Travel Planner</h1>
+<ul>
+{% for trip in trips %}
+<li><a href="{{ url_for('view_trip', trip_id=trip.id) }}">{{ trip.name }}</a></li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('create_trip') }}">Create a new trip</a>
+</body>
+</html>
+
+

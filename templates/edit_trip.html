@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit trip</title>
+</head>
+<body>
+<h1>Edit trip</h1>
+<form action="{{ url_for('edit_trip', trip_id=trip.id) }}" method="post">
+<label for="name">Name:</label>
+<input type="text" name="name" id="name" value="{{ trip.name }}">
+<br>
+<label for="start_date">Start date:</label>
+<input type="date" name="start_date" id="start_date" value="{{ trip.start_date }}">
+<br>
+<label for="end_date">End date:</label>
+<input type="date" name="end_date" id="end_date" value="{{ trip.end_date }}">
+<br>
+<input type="submit" value="Save changes">
+</form>
+</body>
+</html>
+
+
